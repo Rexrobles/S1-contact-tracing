@@ -14,6 +14,8 @@
 #		- Option 2: Search, ask full name then display the record
 #		- Option 3: Ask the user if want to exit or retry.
 
+#displaying empty main dictionary
+Data = {}
 #displaying option menu
 
 print("""
@@ -27,26 +29,67 @@ print("""
 
 userInput = int(input("What do you want to do? (1-3): "))
 
-#if 1
+  #if 1
 if userInput == 1:
-    # ask for the
-    # # ask user  full name
-    FullName = input("Enter your Full name: ")
-    # ask user age
-    age = input("Enter your age: ")
-    # ask user address
-    address = input("Enter your Address: ")
-    # ask gender
-    gender = input("Enter your Gender: ")
-    # ask phone number
-    phone = input("Enter your Phone Number: ")
-    # ask email
-    email = input("Enter your Email: ")
-    # ask user bloodtype
-    bloodtype = input("Enter your Bloodtype: ")
-    # ask user hobby
-    Hobby = input("Enter your Hobby: ")
-    # ask user favorite food
-    favorite = input("Enter your Favorite Food: ")
-  
+      register = str(input("Register your name: ")) ; register.title()
+      # ask for the
+      # # ask user  full name
+      FullName = input("Enter your Full name: ")
+      # ask user age
+      age = input("Enter your age: ")
+      # ask user address
+      address = input("Enter your Address: ")
+      # ask gender
+      gender = input("Enter your Gender: ")
+      # ask phone number
+      phone = input("Enter your Phone Number: ")
+      # ask email
+      email = input("Enter your Email: ")
+      # ask user bloodtype
+      bloodtype = input("Enter your Bloodtype: ")
+      # ask user hobby
+      Hobby = input("Enter your Hobby: ")
+      # ask user favorite food
+      favorite = input("Enter your Favorite Food: ")
+    
+    # add in dictionary variable
+      Data[register] = {
+          "Name": FullName,
+          "Age": age,
+          "Address": address,
+          "Gender": gender,
+          "Phone": phone,
+          "Email": email,
+          "Bloodtype": bloodtype,
+          "Hobby": Hobby,
+          "FavoriteFood": favorite,
+      }
+    # print saved if added
+      print("Information saved!")
+    
+  # if 2
+elif userInput == 2:
+  # Searching if the name is in the dictionary list
+      print("")
+      print("=====Searching Item=====")
+      print()
+      search = input("Enter the Name you want to Search: ")
+      if search in Data:
+            print("Name: " + Data[search]["Name"])
+            print("Age: " + Data[search]["Age"])
+            print("Address: " + Data[search]["Address"])
+            print("Gender: " + Data[search]["Gender"])
+            print("Phone: " + Data[search]["Phone"])
+            print("Email: " + Data[search]["Email"])
+            print("Bloodtype: " + Data[search]["Bloodytype"])
+            print("Hobby: " + Data[search]["Hobby"])
+            print("FavoriteFood: " + Data[search]["FavoriteFood"])
+           
+    # if no, print no records found
+      else:
+        print("No record saved!")
+    # if 3
+  # ask the user if they want to exit y/n
+ 
+  # if exit, exit the program
   
