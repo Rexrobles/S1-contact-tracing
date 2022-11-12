@@ -31,9 +31,8 @@ while True:
 
   #if 1
   if userInput == 1:
-      print()
+        
       register = str(input("Register your name: ")) ; register.title()
-      print("Youre name is registered!!")
       # ask for the
       # # ask user  full name
       FullName = input("Enter your Full name: ")
