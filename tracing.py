@@ -25,6 +25,8 @@ print("""
 
 #asking user to select an item in the menu
 
+userInput = int(input("What do you want to do? (1-3): "))
+
 #if 1
     # ask for the
     # # ask user  full name
