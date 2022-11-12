@@ -28,23 +28,25 @@ print("""
 userInput = int(input("What do you want to do? (1-3): "))
 
 #if 1
+if userInput == 1:
     # ask for the
     # # ask user  full name
+    FullName = input("Enter your Full name: ")
     # ask user age
+    age = input("Enter your age: ")
     # ask user address
+    address = input("Enter your Address: ")
     # ask gender
+    gender = input("Enter your Gender: ")
     # ask phone number
+    phone = input("Enter your Phone Number: ")
     # ask email
-    # ask user work
-    
-  # add in dictionary variable
-  # print saved if added
+    email = input("Enter your Email: ")
+    # ask user bloodtype
+    bloodtype = input("Enter your Bloodtype: ")
+    # ask user hobby
+    Hobby = input("Enter your Hobby: ")
+    # ask user favorite food
+    favorite = input("Enter your Favorite Food: ")
   
-# if 2
-# Searching if the name is in the dictionary list
-  # if yes, display all the information
-  # if no, print no records found
   
-  # if 3
-# ask the user if they want to exit y/n
-# if exit, exit the program
