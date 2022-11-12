@@ -26,11 +26,11 @@ print("""
 """)
 
 #asking user to select an item in the menu
-
-userInput = int(input("What do you want to do? (1-3): "))
+while True:
+  userInput = int(input("What do you want to do? (1-3): "))
 
   #if 1
-if userInput == 1:
+  if userInput == 1:
       register = str(input("Register your name: ")) ; register.title()
       # ask for the
       # # ask user  full name
@@ -68,7 +68,7 @@ if userInput == 1:
       print("Information saved!")
     
   # if 2
-elif userInput == 2:
+  elif userInput == 2:
   # Searching if the name is in the dictionary list
       print("")
       print("=====Searching Item=====")
@@ -90,6 +90,8 @@ elif userInput == 2:
         print("No record saved!")
     # if 3
   # ask the user if they want to exit y/n
- 
+  elif userInput == 3:
+        y_or_no = input("Do you want to exit?\n Type yes/no: ")   
   # if exit, exit the program
-  
+        if y_or_no == "yes":
+            break
