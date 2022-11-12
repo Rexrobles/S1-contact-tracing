@@ -14,8 +14,14 @@
 #		- Option 2: Search, ask full name then display the record
 #		- Option 3: Ask the user if want to exit or retry.
 
-#dictionary of personal data
 #displaying option menu
+
+print("""
+  Menu:
+    1 -> Add an item
+    2 -> Search
+    3 -> Exit (y/n)
+""")
 
 #asking user to select an item in the menu
 
