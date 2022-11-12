@@ -31,7 +31,9 @@ while True:
 
   #if 1
   if userInput == 1:
+      print()
       register = str(input("Register your name: ")) ; register.title()
+      print("Youre name is registered!!")
       # ask for the
       # # ask user  full name
       FullName = input("Enter your Full name: ")
@@ -81,7 +83,7 @@ while True:
             print("Gender: " + Data[search]["Gender"])
             print("Phone: " + Data[search]["Phone"])
             print("Email: " + Data[search]["Email"])
-            print("Bloodtype: " + Data[search]["Bloodytype"])
+            print("Bloodtype: " + Data[search]["Bloodtype"])
             print("Hobby: " + Data[search]["Hobby"])
             print("FavoriteFood: " + Data[search]["FavoriteFood"])
            
