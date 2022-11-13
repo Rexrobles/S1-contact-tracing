@@ -20,23 +20,23 @@ Data = {}
 
 print("""
   Menu:
-    1 -> Add an item
-    2 -> Search
-    3 -> Exit (y/n)
+    \033[34;4m1 -> Add an item\033[0m 
+    \033[34;4m2 -> Search\033[0m
+    \033[34;4m3 -> Exit (y/n)\033[0m
 """)
 
 #asking user to select an item in the menu
 while True:
-  userInput = int(input("What do you want to do? (1-3): "))
+  userInput = int(input("\n\033[35;2mWhat do you want to do? (1-3)\033[0m: "))
 
   #if 1
   if userInput == 1:
         
-      register = str(input("Register your name: ")) ; register.title()
       # ask for the
       # # ask user  full name
+      print(">> Please Add your Information <<")
       FullName = input("Enter your Full name: ")
-      # ask user age
+      # ask user 
       age = input("Enter your age: ")
       # ask user address
       address = input("Enter your Address: ")
@@ -54,7 +54,7 @@ while True:
       favorite = input("Enter your Favorite Food: ")
     
     # add in dictionary variable
-      Data[register] = {
+      Data[FullName] = {
           "Name": FullName,
           "Age": age,
           "Address": address,
@@ -66,15 +66,16 @@ while True:
           "FavoriteFood": favorite,
       }
     # print saved if added
-      print("Information saved!")
-    
+      print("\n\033[31;1mInformation saved!\033[0m")
+      print()
+      
   # if 2
   elif userInput == 2:
   # Searching if the name is in the dictionary list
       print("")
-      print("=====Searching Item=====")
+      print("\033[32;1m=====Searching Item=====\033[0m")
       print()
-      search = input("Enter the Name you want to Search: ")
+      search = input("\037[31;3mEnter the Name you want to Search\033[0m: ")
       if search in Data:
             print("Name: " + Data[search]["Name"])
             print("Age: " + Data[search]["Age"])
@@ -88,11 +89,13 @@ while True:
            
     # if no, print no records found
       else:
-        print("No record saved!")
+        print("\033[32;1mNo record saved!\033[0m")
     # if 3
   # ask the user if they want to exit y/n
   elif userInput == 3:
         y_or_no = input("Do you want to exit?\n Type yes/no: ")   
-  # if exit, exit the program
         if y_or_no == "yes":
             break
+        elif y_or_no == "no":
+              continue
+print("THANK YOU!!")
